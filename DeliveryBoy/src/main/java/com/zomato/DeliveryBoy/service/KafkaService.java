@@ -1,0 +1,24 @@
+package com.zomato.DeliveryBoy.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.kafka.core.KafkaTemplate;
+import org.springframework.stereotype.Service;
+
+import com.zomato.DeliveryBoy.constant.AppConstant;
+
+@Service
+public class KafkaService {
+	
+	@Autowired
+	private KafkaTemplate<String, String> template;
+	
+	
+	public boolean updateLocation(String location) {
+		
+		template.send(AppConstant.LOCATION_TOPIC_NAME, location);
+		System.out.println(location);
+		return true;
+	}
+	
+
+}

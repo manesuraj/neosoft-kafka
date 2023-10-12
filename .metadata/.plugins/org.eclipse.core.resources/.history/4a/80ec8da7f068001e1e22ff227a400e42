@@ -1,0 +1,5 @@
+package com.zomato.DeliveryBoy.service;
+
+public class KafkaService {
+
+}

@@ -1,0 +1,5 @@
+package com.zomato.DeliveryBoy.config;
+
+public class KafkaConfig {
+
+}
